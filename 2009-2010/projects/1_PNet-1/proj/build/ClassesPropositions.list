@@ -1,0 +1,62 @@
+La classe "Device"
+    è composta dal seguente attributo:
+        - features;
+    fornisce il seguente metodo:
+        - "getFeatures", per ottenere le caratteristiche del device utente;
+ 
+La classe "Sistema P-net"
+    è composta dal seguente attributo:
+        - version;
+    fornisce il seguente metodo:
+        - "recognFeatures", per riconoscere il tipo di device utente;
+ 
+La classe "Device mobile"
+    è un "Device" ed ha gli attributi e le operazioni ereditati da esso;
+    è composta dal seguente attributo:
+        - Connection;
+    fornisce il seguente metodo:
+        - "getConnection", per ottenere il tipo di connessione utilizzata dal device utente;
+     presenta le seguenti 2 relazioni:
+            - la relazione che mi fa associare "Device mobile a sistema p-net 2G version";
+            - la relazione che mi fa associare "Device mobile a Sistema P-net 3G version";
+
+La classe "Device Pc"
+    è un "Device" ed ha gli attributi e le operazioni ereditati da esso;
+    è composta dal seguente attributo:
+        - Connection;
+    fornisce il seguente metodo:
+        - "getConnection", per ottenere il tipo di connessione usata dal device utente;
+     presenta le seguenti 2 relazioni:
+            - la relazione che mi fa associare "Device pc a sistema p-net 56k version";
+            - la relazione che mi fa associare "Device Pc a sistema p- net ADSL version";
+
+La classe "Sistema P-net pc"
+    è un "Sistema P-net" ed ha gli attributi e le operazioni ereditati da esso;
+     fornisce il seguente metodo:
+        - "recognConnection", per riconoscere il tipo di connessione usata dal device utente;
+ 
+La classe "Sistema P-net mobile"
+    è un "Sistema P-net" ed ha gli attributi e le operazioni ereditati da esso;
+     fornisce il seguente metodo:
+        - "recognConnection", per riconoscere il tipo di connessione usata dal device utente;
+ 
+La classe "Sistema P-net 2G"
+    è un "Sistema P-net mobile" ed ha gli attributi e le operazioni ereditati da esso;
+      presenta la seguente relazione:
+            - la relazione che mi fa associare "Device mobile a sistema p-net 2G version";
+
+La classe "Sistema P-net 3G"
+    è un "Sistema P-net mobile" ed ha gli attributi e le operazioni ereditati da esso;
+      presenta la seguente relazione:
+            - la relazione che mi fa associare "Device mobile a Sistema P-net 3G version";
+
+La classe "Sistema P-net ADSL"
+    è un "Sistema P-net pc" ed ha gli attributi e le operazioni ereditati da esso;
+      presenta la seguente relazione:
+            - la relazione che mi fa associare "Device Pc a sistema p- net ADSL version";
+
+La classe "Sistema P-net 56k"
+    è un "Sistema P-net pc" ed ha gli attributi e le operazioni ereditati da esso;
+      presenta la seguente relazione:
+            - la relazione che mi fa associare "Device pc a sistema p-net 56k version";
+

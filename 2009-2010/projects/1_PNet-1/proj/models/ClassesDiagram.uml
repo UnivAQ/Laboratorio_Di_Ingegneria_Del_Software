@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_lfd5NBW9Ed-DT7TO_tQKNQ" name="CLASS">
+  <packageImport xmi:id="_lfd5NRW9Ed-DT7TO_tQKNQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ovyaMBW9Ed-DT7TO_tQKNQ" name="P-Net">
+    <packagedElement xmi:type="uml:Class" xmi:id="_OgUAIBW-Ed-DT7TO_tQKNQ" name="Device">
+      <ownedAttribute xmi:id="_p8Q-8BW-Ed-DT7TO_tQKNQ" name="features" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_tuZz0BW-Ed-DT7TO_tQKNQ" name="getFeatures">
+        <ownedComment xmi:id="_nws5wBXTEd-DT7TO_tQKNQ" annotatedElement="_tuZz0BW-Ed-DT7TO_tQKNQ">
+          <body>ottenere le caratteristiche del device utente</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PWjEkBW-Ed-DT7TO_tQKNQ" name="Sistema P-net">
+      <ownedAttribute xmi:id="_yn7HgBW-Ed-DT7TO_tQKNQ" name="version" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_09iUABW-Ed-DT7TO_tQKNQ" name="recognFeatures">
+        <ownedComment xmi:id="_laYGIBXUEd-DT7TO_tQKNQ" annotatedElement="_09iUABW-Ed-DT7TO_tQKNQ">
+          <body>riconoscere il tipo di device utente</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RW_5YBW-Ed-DT7TO_tQKNQ" name="Device mobile" clientDependency="_QfElUBXeEd-DT7TO_tQKNQ _edluoBXeEd-DT7TO_tQKNQ">
+      <generalization xmi:id="_Z40wgBW-Ed-DT7TO_tQKNQ" general="_OgUAIBW-Ed-DT7TO_tQKNQ"/>
+      <ownedAttribute xmi:id="_hQJjYBW-Ed-DT7TO_tQKNQ" name="Connection" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_njOrABW-Ed-DT7TO_tQKNQ" name="getConnection">
+        <ownedComment xmi:id="_LcoVQBXVEd-DT7TO_tQKNQ" annotatedElement="_njOrABW-Ed-DT7TO_tQKNQ">
+          <body>ottenere il tipo di connessione utilizzata dal device utente</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SHRfwBW-Ed-DT7TO_tQKNQ" name="Device Pc" clientDependency="_fwvYkBXeEd-DT7TO_tQKNQ _gQU3kBXeEd-DT7TO_tQKNQ">
+      <generalization xmi:id="_aijC8BW-Ed-DT7TO_tQKNQ" general="_OgUAIBW-Ed-DT7TO_tQKNQ"/>
+      <ownedAttribute xmi:id="_eL5vQBW-Ed-DT7TO_tQKNQ" name="Connection" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_BMlwMBXSEd-DT7TO_tQKNQ" name="PrimitiveType_0"/>
+      <ownedOperation xmi:id="_kcvbMBW-Ed-DT7TO_tQKNQ" name="getConnection">
+        <ownedComment xmi:id="_UtEbUBXUEd-DT7TO_tQKNQ" annotatedElement="_kcvbMBW-Ed-DT7TO_tQKNQ">
+          <body>ottenere il tipo di connessione usata dal device utente</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SqmPQBW-Ed-DT7TO_tQKNQ" name="Sistema P-net pc">
+      <generalization xmi:id="_ZQSw4BW-Ed-DT7TO_tQKNQ" general="_PWjEkBW-Ed-DT7TO_tQKNQ"/>
+      <ownedOperation xmi:id="_5VE8ABW-Ed-DT7TO_tQKNQ" name="recognConnection">
+        <ownedComment xmi:id="_jR4IkBXUEd-DT7TO_tQKNQ" annotatedElement="_5VE8ABW-Ed-DT7TO_tQKNQ">
+          <body>riconoscere il tipo di connessione usata dal device utente</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TKepMBW-Ed-DT7TO_tQKNQ" name="Sistema P-net mobile">
+      <generalization xmi:id="_YyCuoBW-Ed-DT7TO_tQKNQ" general="_PWjEkBW-Ed-DT7TO_tQKNQ"/>
+      <ownedOperation xmi:id="_3j-x0BW-Ed-DT7TO_tQKNQ" name="recognConnection">
+        <ownedComment xmi:id="_fyXUwBXUEd-DT7TO_tQKNQ" annotatedElement="_3j-x0BW-Ed-DT7TO_tQKNQ">
+          <body>riconoscere il tipo di connessione usata dal device utente</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_U8xtQBW-Ed-DT7TO_tQKNQ" name="Sistema P-net 2G">
+      <generalization xmi:id="_9GxsABW-Ed-DT7TO_tQKNQ" general="_TKepMBW-Ed-DT7TO_tQKNQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Vg1ckBW-Ed-DT7TO_tQKNQ" name="Sistema P-net 3G">
+      <generalization xmi:id="_8x62UBW-Ed-DT7TO_tQKNQ" general="_TKepMBW-Ed-DT7TO_tQKNQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WDHDMBW-Ed-DT7TO_tQKNQ" name="Sistema P-net ADSL">
+      <generalization xmi:id="_YXEp4BW-Ed-DT7TO_tQKNQ" general="_SqmPQBW-Ed-DT7TO_tQKNQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_N_lmwBXAEd-DT7TO_tQKNQ" name="Sistema P-net 56k">
+      <generalization xmi:id="_qyi38BXEEd-DT7TO_tQKNQ" general="_SqmPQBW-Ed-DT7TO_tQKNQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_QfElUBXeEd-DT7TO_tQKNQ" name="FromDevice mobiletoSistema P-net 2G" supplier="_U8xtQBW-Ed-DT7TO_tQKNQ" client="_RW_5YBW-Ed-DT7TO_tQKNQ">
+      <ownedComment xmi:id="_vtf6wBXfEd-DT7TO_tQKNQ" annotatedElement="_QfElUBXeEd-DT7TO_tQKNQ">
+        <body>Device mobile a sistema p-net 2G version</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_edluoBXeEd-DT7TO_tQKNQ" name="FromDevice mobiletoSistema P-net 3G" supplier="_Vg1ckBW-Ed-DT7TO_tQKNQ" client="_RW_5YBW-Ed-DT7TO_tQKNQ">
+      <ownedComment xmi:id="__KfNMBXfEd-DT7TO_tQKNQ" annotatedElement="_edluoBXeEd-DT7TO_tQKNQ">
+        <body>Device mobile a Sistema P-net 3G version</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_fwvYkBXeEd-DT7TO_tQKNQ" name="FromDevice PctoSistema P-net 56k" supplier="_N_lmwBXAEd-DT7TO_tQKNQ" client="_SHRfwBW-Ed-DT7TO_tQKNQ">
+      <ownedComment xmi:id="_DMbYoBXgEd-DT7TO_tQKNQ" annotatedElement="_fwvYkBXeEd-DT7TO_tQKNQ">
+        <body>Device pc a sistema p-net 56k version</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_gQU3kBXeEd-DT7TO_tQKNQ" name="FromDevice PctoSistema P-net ADSL" supplier="_WDHDMBW-Ed-DT7TO_tQKNQ" client="_SHRfwBW-Ed-DT7TO_tQKNQ">
+      <ownedComment xmi:id="_HQTdwBXgEd-DT7TO_tQKNQ" annotatedElement="_gQU3kBXeEd-DT7TO_tQKNQ">
+        <body>Device Pc a sistema p- net ADSL version</body>
+      </ownedComment>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:id="_lfd5NhW9Ed-DT7TO_tQKNQ">
+    <eAnnotations xmi:id="_lfd5NxW9Ed-DT7TO_tQKNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/schemas/Standard/1#/"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

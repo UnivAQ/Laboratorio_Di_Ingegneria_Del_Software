@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_-IETMBGHEd-HvP_Ox8Uswg" name="Diagrams">
+  <ownedComment xmi:id="_di-a4BGIEd-HvP_Ox8Uswg">
+    <body>P-NET</body>
+  </ownedComment>
+  <packageImport xmi:id="_-IETMRGHEd-HvP_Ox8Uswg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_FRraMBGIEd-HvP_Ox8Uswg" name="Utente"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_LrwhsBGIEd-HvP_Ox8Uswg" name="Accesso">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_NRXl8BWsEd-DT7TO_tQKNQ" name="Accesso">
+      <node xmi:type="uml:InitialNode" xmi:id="_4gEEwBWsEd-DT7TO_tQKNQ" name="InitialNode_0" outgoing="_JVH9YBWtEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_IzTCsBWtEd-DT7TO_tQKNQ" name="Richiesta di accesso" outgoing="_sXALwBWtEd-DT7TO_tQKNQ" incoming="_JVH9YBWtEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_W8GJYBWtEd-DT7TO_tQKNQ" name="Riconoscitore dispositivo prende caratteristiche e connessione tramite getfeatures() e get connection()" outgoing="_4VEgQBWtEd-DT7TO_tQKNQ" incoming="_sXALwBWtEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_0iLdcBWtEd-DT7TO_tQKNQ" name="Comunicazione caratteristiche e connessione al sistema" outgoing="_LimPoBWvEd-DT7TO_tQKNQ" incoming="_4VEgQBWtEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_X3IY0BWuEd-DT7TO_tQKNQ" name="Riconosci connessione" outgoing="_JuZRoBWwEd-DT7TO_tQKNQ" incoming="_gSHBEBWuEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_dOwk0BWuEd-DT7TO_tQKNQ" name="Dispositivo mobile?" outgoing="_gSHBEBWuEd-DT7TO_tQKNQ _q_JWEBWvEd-DT7TO_tQKNQ" incoming="_nr2ZUBWvEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_hZCz8BWuEd-DT7TO_tQKNQ" name="Riconosci features" outgoing="_nr2ZUBWvEd-DT7TO_tQKNQ" incoming="_LimPoBWvEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_qDsacBWvEd-DT7TO_tQKNQ" name="Riconosci connessione" outgoing="_76KswBWvEd-DT7TO_tQKNQ" incoming="_q_JWEBWvEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_1zm-MBWvEd-DT7TO_tQKNQ" name="2G?" outgoing="_lamS8BWwEd-DT7TO_tQKNQ _rtOHkBWwEd-DT7TO_tQKNQ" incoming="_76KswBWvEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_DvJE8BWwEd-DT7TO_tQKNQ" name="ADSL" outgoing="__JeE4BWwEd-DT7TO_tQKNQ _COxB4BWxEd-DT7TO_tQKNQ" incoming="_JuZRoBWwEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_kXFngBWwEd-DT7TO_tQKNQ" name="Carica 3G version" outgoing="_3Xp48BWxEd-DT7TO_tQKNQ" incoming="_lamS8BWwEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_pP3UUBWwEd-DT7TO_tQKNQ" name="Carica 2G version" outgoing="_4AezgBWxEd-DT7TO_tQKNQ" incoming="_rtOHkBWwEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_3HOswBWwEd-DT7TO_tQKNQ" name="Carica ADSL version" outgoing="_1WwYMBWxEd-DT7TO_tQKNQ" incoming="__JeE4BWwEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:AcceptCallAction" xmi:id="_30O8sBWwEd-DT7TO_tQKNQ" name="Carica 56k version" outgoing="_0n0OkBWxEd-DT7TO_tQKNQ" incoming="_COxB4BWxEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:MergeNode" xmi:id="_rHQeUBWxEd-DT7TO_tQKNQ" name="MergeNode_0" outgoing="_-dGRoBWxEd-DT7TO_tQKNQ" incoming="_0n0OkBWxEd-DT7TO_tQKNQ _1WwYMBWxEd-DT7TO_tQKNQ _3Xp48BWxEd-DT7TO_tQKNQ _4AezgBWxEd-DT7TO_tQKNQ"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_8xXIkBWxEd-DT7TO_tQKNQ" name="FinalNode_0" incoming="_-dGRoBWxEd-DT7TO_tQKNQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_JVH9YBWtEd-DT7TO_tQKNQ" name="ControlFlow_InitialNode_0_AcceptCallAction_0" source="_4gEEwBWsEd-DT7TO_tQKNQ" target="_IzTCsBWtEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_JVH9YRWtEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_JVRHUBWtEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_sXALwBWtEd-DT7TO_tQKNQ" name="ControlFlow_Richiesta di accesso_Riconoscitore dispositivo prende caratteristiche e connessione tramite getfeatures() e get connection()" source="_IzTCsBWtEd-DT7TO_tQKNQ" target="_W8GJYBWtEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_sXJ8wBWtEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_sXJ8wRWtEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_4VEgQBWtEd-DT7TO_tQKNQ" name="ControlFlow_Riconoscitore dispositivo prende caratteristiche e connessione tramite getfeatures() e get connection()_AcceptCallAction_0" source="_W8GJYBWtEd-DT7TO_tQKNQ" target="_0iLdcBWtEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_4VORQBWtEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_4VXbMBWtEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_gSHBEBWuEd-DT7TO_tQKNQ" name="ControlFlow_DecisionNode_0_AcceptCallAction_0" source="_dOwk0BWuEd-DT7TO_tQKNQ" target="_X3IY0BWuEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_gSQyEBWuEd-DT7TO_tQKNQ" name="Guard" value="type= PC_device"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_gSQyERWuEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_LimPoBWvEd-DT7TO_tQKNQ" name="ControlFlow_Comunicazione caratteristiche e connessione al sistema_Riconosci features" source="_0iLdcBWtEd-DT7TO_tQKNQ" target="_hZCz8BWuEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_Li5KkBWvEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_Li5KkRWvEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_nr2ZUBWvEd-DT7TO_tQKNQ" name="ControlFlow_Riconosci features_Dispositivo mobile?" source="_hZCz8BWuEd-DT7TO_tQKNQ" target="_dOwk0BWuEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_nsAKUBWvEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_nsJUQBWvEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q_JWEBWvEd-DT7TO_tQKNQ" name="ControlFlow_Dispositivo mobile?_AcceptCallAction_1" source="_dOwk0BWuEd-DT7TO_tQKNQ" target="_qDsacBWvEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_q_mCABWvEd-DT7TO_tQKNQ" name="Guard" value="Type= mobile_device"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_q_mCARWvEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_76KswBWvEd-DT7TO_tQKNQ" name="ControlFlow_Riconosci connessione_DecisionNode_0" source="_qDsacBWvEd-DT7TO_tQKNQ" target="_1zm-MBWvEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_76nYsBWvEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_76nYsRWvEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_JuZRoBWwEd-DT7TO_tQKNQ" name="ControlFlow_Riconosci connessione_DecisionNode_1" source="_X3IY0BWuEd-DT7TO_tQKNQ" target="_DvJE8BWwEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_Ju19kBWwEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_Ju19kRWwEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_lamS8BWwEd-DT7TO_tQKNQ" name="ControlFlow_2G?_AcceptCallAction_0" source="_1zm-MBWvEd-DT7TO_tQKNQ" target="_kXFngBWwEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_lbCX0BWwEd-DT7TO_tQKNQ" name="Guard" value="Connection= 3G"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_lbCX0RWwEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_rtOHkBWwEd-DT7TO_tQKNQ" name="ControlFlow_2G?_AcceptCallAction_1" source="_1zm-MBWvEd-DT7TO_tQKNQ" target="_pP3UUBWwEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_rt0kgBWwEd-DT7TO_tQKNQ" name="Guard" value="Connection= 2G"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_rt0kgRWwEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="__JeE4BWwEd-DT7TO_tQKNQ" name="ControlFlow_ADSL_Carica ADSL version" source="_DvJE8BWwEd-DT7TO_tQKNQ" target="_3HOswBWwEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="__KEh0BWwEd-DT7TO_tQKNQ" name="Guard" value="Connection= ADSL"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="__KEh0RWwEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_COxB4BWxEd-DT7TO_tQKNQ" name="ControlFlow_ADSL_Carica 56k version" source="_DvJE8BWwEd-DT7TO_tQKNQ" target="_30O8sBWwEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_CPNGwBWxEd-DT7TO_tQKNQ" name="Guard" value="Connection= 56k"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_CPW3wBWxEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_0n0OkBWxEd-DT7TO_tQKNQ" name="ControlFlow_Carica 56k version_MergeNode_0" source="_30O8sBWwEd-DT7TO_tQKNQ" target="_rHQeUBWxEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_0okcgBWxEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_0okcgRWxEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_1WwYMBWxEd-DT7TO_tQKNQ" name="ControlFlow_Carica ADSL version_MergeNode_0" source="_3HOswBWwEd-DT7TO_tQKNQ" target="_rHQeUBWxEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_1Xf_EBWxEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_1XpwEBWxEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_3Xp48BWxEd-DT7TO_tQKNQ" name="ControlFlow_Carica 3G version_MergeNode_0" source="_kXFngBWwEd-DT7TO_tQKNQ" target="_rHQeUBWxEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_3YZf0BWxEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_3YZf0RWxEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_4AezgBWxEd-DT7TO_tQKNQ" name="ControlFlow_Carica 2G version_MergeNode_0" source="_pP3UUBWwEd-DT7TO_tQKNQ" target="_rHQeUBWxEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_4BYLYBWxEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_4BYLYRWxEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_-dGRoBWxEd-DT7TO_tQKNQ" name="ControlFlow_MergeNode_0_FinalNode_0" source="_rHQeUBWxEd-DT7TO_tQKNQ" target="_8xXIkBWxEd-DT7TO_tQKNQ">
+        <guard xmi:type="uml:LiteralString" xmi:id="_-d_pgBWxEd-DT7TO_tQKNQ" name="Guard"/>
+        <weight xmi:type="uml:LiteralString" xmi:id="_-d_pgRWxEd-DT7TO_tQKNQ" name="Weight"/>
+      </edge>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_aVMQQBGIEd-HvP_Ox8Uswg" name="P-net"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_kzTN4BGIEd-HvP_Ox8Uswg" name="Riconoscitore_dispositivo"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_meSwEBGIEd-HvP_Ox8Uswg" name="Riconoscimento dispositivo"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_62vP4BGIEd-HvP_Ox8Uswg" name="Riconoscimento dispositivo"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_MnZOEBGJEd-HvP_Ox8Uswg" name="Rilascio versione appropriata"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jFgZ4BGJEd-HvP_Ox8Uswg" name="A_P-net_Riconoscimento dispositivo" memberEnd="_jFqK4BGJEd-HvP_Ox8Uswg _jFqK4xGJEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_jFqK4BGJEd-HvP_Ox8Uswg" name="riconoscimento dispositivo" type="_62vP4BGIEd-HvP_Ox8Uswg" isUnique="false" association="_jFgZ4BGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jFqK4hGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jFqK4RGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_jFqK4xGJEd-HvP_Ox8Uswg" name="p-net" type="_aVMQQBGIEd-HvP_Ox8Uswg" isUnique="false" association="_jFgZ4BGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jFz74BGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jFz74RGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_kqieABGJEd-HvP_Ox8Uswg" name="A_Riconoscitore_dispositivo_Riconoscimento dispositivo" memberEnd="_kqsPABGJEd-HvP_Ox8Uswg _kqsPAxGJEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_kqsPABGJEd-HvP_Ox8Uswg" name="riconoscimento dispositivo" type="_62vP4BGIEd-HvP_Ox8Uswg" isUnique="false" association="_kqieABGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kqsPAhGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kqsPARGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_kqsPAxGJEd-HvP_Ox8Uswg" name="riconoscitore_dispositivo" type="_kzTN4BGIEd-HvP_Ox8Uswg" isUnique="false" association="_kqieABGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kq1Y8BGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kq1Y8RGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_reGcgBGJEd-HvP_Ox8Uswg" name="Server_db"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vS7ZABGJEd-HvP_Ox8Uswg" name="A_Rilascio versione appropriata_Server_db" memberEnd="_vTEi8BGJEd-HvP_Ox8Uswg _vTEi8xGJEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_vTEi8BGJEd-HvP_Ox8Uswg" name="server_db" type="_reGcgBGJEd-HvP_Ox8Uswg" isUnique="false" association="_vS7ZABGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vTEi8hGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vTEi8RGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_vTEi8xGJEd-HvP_Ox8Uswg" name="rilascio versione appropriata" type="_MnZOEBGJEd-HvP_Ox8Uswg" isUnique="false" association="_vS7ZABGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vTEi9BGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vTEi9RGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UOrxwBGYEd-HvP_Ox8Uswg" name="A_Utente_Riconoscimento dispositivo" memberEnd="_UO1iwBGYEd-HvP_Ox8Uswg _UO_TwhGYEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_UO1iwBGYEd-HvP_Ox8Uswg" name="riconoscimento dispositivo" type="_62vP4BGIEd-HvP_Ox8Uswg" isUnique="false" association="_UOrxwBGYEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UO_TwRGYEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UO_TwBGYEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_UO_TwhGYEd-HvP_Ox8Uswg" name="utente" type="_FRraMBGIEd-HvP_Ox8Uswg" isUnique="false" association="_UOrxwBGYEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UO_TwxGYEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UPIdsBGYEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_veZHgBGcEd-HvP_Ox8Uswg" name="A_Utente_Accesso" memberEnd="_vei4gBGcEd-HvP_Ox8Uswg _vespghGcEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_vei4gBGcEd-HvP_Ox8Uswg" name="accesso" type="_LrwhsBGIEd-HvP_Ox8Uswg" isUnique="false" association="_veZHgBGcEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vespgRGcEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vespgBGcEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_vespghGcEd-HvP_Ox8Uswg" name="utente" type="_FRraMBGIEd-HvP_Ox8Uswg" isUnique="false" association="_veZHgBGcEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vespgxGcEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vesphBGcEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PwuCkBGhEd-HvP_Ox8Uswg" name="Device">
+    <ownedAttribute xmi:id="_b9YzwBGhEd-HvP_Ox8Uswg" name="features" visibility="private" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yWGL8BWjEd-DT7TO_tQKNQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yV8a8BWjEd-DT7TO_tQKNQ"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_fOAP8hGhEd-HvP_Ox8Uswg">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_QabUgBWfEd-DT7TO_tQKNQ" name="getfeatures"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_REnTYBGhEd-HvP_Ox8Uswg" name="P-net">
+    <ownedAttribute xmi:id="_tQ488BW0Ed-DT7TO_tQKNQ" name="version" visibility="private" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1KL0cRW0Ed-DT7TO_tQKNQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1KL0cBW0Ed-DT7TO_tQKNQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_Qu5VYBWvEd-DT7TO_tQKNQ" name="RecognConn" isAbstract="true"/>
+    <ownedOperation xmi:id="_rjGI8BW1Ed-DT7TO_tQKNQ" name="RecognFeatures"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_u4QiUBGhEd-HvP_Ox8Uswg" name="Dispositivo PC">
+    <generalization xmi:id="_5uMxIBGhEd-HvP_Ox8Uswg" general="_PwuCkBGhEd-HvP_Ox8Uswg"/>
+    <ownedAttribute xmi:id="_FBZHMBGjEd-HvP_Ox8Uswg" name="connection" visibility="private" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JBPn8BGjEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JBF28BGjEd-HvP_Ox8Uswg" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_JBPn8RGjEd-HvP_Ox8Uswg">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_ghSqYBWfEd-DT7TO_tQKNQ" name="getconnection"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wCdroBGhEd-HvP_Ox8Uswg" name="Dispositivo mobile">
+    <generalization xmi:id="_5FOsoBGhEd-HvP_Ox8Uswg" general="_PwuCkBGhEd-HvP_Ox8Uswg"/>
+    <ownedAttribute xmi:id="_JUKj8BGjEd-HvP_Ox8Uswg" name="connection" visibility="private" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LpVEgRGjEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LpVEgBGjEd-HvP_Ox8Uswg" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_LpVEghGjEd-HvP_Ox8Uswg">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_yzeoUBWfEd-DT7TO_tQKNQ" name="getconnection"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8OsX8BGhEd-HvP_Ox8Uswg" name="P-net mobile version">
+    <generalization xmi:id="_Gz8fYBGiEd-HvP_Ox8Uswg" general="_REnTYBGhEd-HvP_Ox8Uswg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9jLeoBGhEd-HvP_Ox8Uswg" name="P-net versione PC">
+    <generalization xmi:id="_HSWSoBGiEd-HvP_Ox8Uswg" general="_REnTYBGhEd-HvP_Ox8Uswg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IQyQ0BGiEd-HvP_Ox8Uswg" name="P-net 2G">
+    <generalization xmi:id="_N9QrcBGiEd-HvP_Ox8Uswg" general="_8OsX8BGhEd-HvP_Ox8Uswg"/>
+    <ownedAttribute xmi:id="_g-ikABGiEd-HvP_Ox8Uswg" name="dispositivo PC" type="_wCdroBGhEd-HvP_Ox8Uswg" isUnique="false" association="_g-F4EBGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g-sVARGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g-sVABGiEd-HvP_Ox8Uswg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JhZkIBGiEd-HvP_Ox8Uswg" name="P-net 3G">
+    <generalization xmi:id="_NSWGMBGiEd-HvP_Ox8Uswg" general="_8OsX8BGhEd-HvP_Ox8Uswg"/>
+    <ownedAttribute xmi:id="_pcC70BGiEd-HvP_Ox8Uswg" name="dispositivo mobile" type="_wCdroBGhEd-HvP_Ox8Uswg" isUnique="false" association="_pbmP4BGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pcMs0RGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pcMs0BGiEd-HvP_Ox8Uswg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Kveg0BGiEd-HvP_Ox8Uswg" name="P-net 56k ver.">
+    <generalization xmi:id="_MydsQBGiEd-HvP_Ox8Uswg" general="_9jLeoBGhEd-HvP_Ox8Uswg"/>
+    <ownedAttribute xmi:id="_0EuxwBGiEd-HvP_Ox8Uswg" name="dispositivo PC" type="_u4QiUBGhEd-HvP_Ox8Uswg" isUnique="false" association="_0ESF0BGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0EuxwhGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0EuxwRGiEd-HvP_Ox8Uswg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LggVIBGiEd-HvP_Ox8Uswg" name="P-net ADSL ver.">
+    <generalization xmi:id="_MYYYUBGiEd-HvP_Ox8Uswg" general="_9jLeoBGhEd-HvP_Ox8Uswg"/>
+    <ownedAttribute xmi:id="_01drIBGiEd-HvP_Ox8Uswg" name="dispositivo PC" type="_u4QiUBGhEd-HvP_Ox8Uswg" isUnique="false" association="_01A_MBGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_01drIhGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_01drIRGiEd-HvP_Ox8Uswg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_g-F4EBGiEd-HvP_Ox8Uswg" name="A_P-net 2G_Dispositivo PC" memberEnd="_g-ikABGiEd-HvP_Ox8Uswg _g-sVAhGiEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_g-sVAhGiEd-HvP_Ox8Uswg" name="p-net 2G" type="_IQyQ0BGiEd-HvP_Ox8Uswg" isUnique="false" association="_g-F4EBGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g-1e8BGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g-1e8RGiEd-HvP_Ox8Uswg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pbmP4BGiEd-HvP_Ox8Uswg" name="A_P-net 3G_Dispositivo mobile" memberEnd="_pcC70BGiEd-HvP_Ox8Uswg _pcMs0hGiEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_pcMs0hGiEd-HvP_Ox8Uswg" name="p-net 3G" type="_JhZkIBGiEd-HvP_Ox8Uswg" isUnique="false" association="_pbmP4BGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pcV2wBGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pcV2wRGiEd-HvP_Ox8Uswg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0ESF0BGiEd-HvP_Ox8Uswg" name="A_P-net 56k ver._Dispositivo PC" memberEnd="_0EuxwBGiEd-HvP_Ox8Uswg _0E4iwBGiEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_0E4iwBGiEd-HvP_Ox8Uswg" name="p-net 56k ver." type="_Kveg0BGiEd-HvP_Ox8Uswg" isUnique="false" association="_0ESF0BGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0FBssBGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0FBssRGiEd-HvP_Ox8Uswg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_01A_MBGiEd-HvP_Ox8Uswg" name="A_P-net ADSL ver._Dispositivo PC" memberEnd="_01drIBGiEd-HvP_Ox8Uswg _01m1EBGiEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_01m1EBGiEd-HvP_Ox8Uswg" name="p-net ADSL ver." type="_LggVIBGiEd-HvP_Ox8Uswg" isUnique="false" association="_01A_MBGiEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_01m1ERGiEd-HvP_Ox8Uswg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_01m1EhGiEd-HvP_Ox8Uswg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_AnN3gBT8Ed-DT7TO_tQKNQ" name="SendEvt1"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zEeYABGJEd-HvP_Ox8Uswg" name="A_P-net_Rilascio versione appropriata" memberEnd="_zEoJABGJEd-HvP_Ox8Uswg _zEoJAxGJEd-HvP_Ox8Uswg">
+    <ownedEnd xmi:id="_zEoJABGJEd-HvP_Ox8Uswg" name="rilascio versione appropriata" type="_MnZOEBGJEd-HvP_Ox8Uswg" isUnique="false" association="_zEeYABGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zEoJAhGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zEoJARGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_zEoJAxGJEd-HvP_Ox8Uswg" name="p-net" type="_aVMQQBGIEd-HvP_Ox8Uswg" isUnique="false" association="_zEeYABGJEd-HvP_Ox8Uswg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zEoJBBGJEd-HvP_Ox8Uswg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zEoJBRGJEd-HvP_Ox8Uswg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C3dpkBUBEd-DT7TO_tQKNQ" name="RecvEvt2"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_Du5n4BUBEd-DT7TO_tQKNQ" name="SendEvt2"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_JlXE8BUBEd-DT7TO_tQKNQ" name="SendEvt4"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_Jn5bkBUBEd-DT7TO_tQKNQ" name="RecvEvt5"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_dnnSUBUBEd-DT7TO_tQKNQ" name="SendEvt5"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_dqSy4BUBEd-DT7TO_tQKNQ" name="RecvEvt4"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_q3744BUBEd-DT7TO_tQKNQ" name="SendEvt3"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_sQJpABUBEd-DT7TO_tQKNQ" name="RecvEvt1"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_vCEXABUBEd-DT7TO_tQKNQ" name="SendEvt6"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_vmkyQBUBEd-DT7TO_tQKNQ" name="RecvEvt6"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_wtNDIBUBEd-DT7TO_tQKNQ" name="SendEvt7"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_xWVfsBUBEd-DT7TO_tQKNQ" name="RecvEvt3"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_yuZe0BUBEd-DT7TO_tQKNQ" name="SendEvt8"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_zVSfsBUBEd-DT7TO_tQKNQ" name="RecvEvt7"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_11B4kBUBEd-DT7TO_tQKNQ" name="RecvEvt8"/>
+  <packagedElement xmi:type="uml:Collaboration" xmi:id="_3Da44BWyEd-DT7TO_tQKNQ" name="Collaboration1"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_JKhmwBY4Ed-N8vOk4O2yDA" name="RecvEvt9"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_MbSz8BY4Ed-N8vOk4O2yDA" name="SendEvt9"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_NCyRwBY4Ed-N8vOk4O2yDA" name="RecvEvt11"/>
+  <packagedElement xmi:type="uml:Collaboration" xmi:id="_jjHEEBY4Ed-N8vOk4O2yDA" name="Collaboration2">
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_jkJl4BY4Ed-N8vOk4O2yDA" name="Sequence riconoscimento">
+      <lifeline xmi:id="_toxsgBY4Ed-N8vOk4O2yDA" name="Utente" coveredBy="_19pFsBY4Ed-N8vOk4O2yDA _-T_soBY4Ed-N8vOk4O2yDA _BvMoMBY5Ed-N8vOk4O2yDA _ThygEBY5Ed-N8vOk4O2yDA"/>
+      <lifeline xmi:id="_wuguYBY4Ed-N8vOk4O2yDA" name="Riconoscitore dispositivo" coveredBy="_4cCawRY4Ed-N8vOk4O2yDA _-T2isBY4Ed-N8vOk4O2yDA _BvVyIBY5Ed-N8vOk4O2yDA _HBTbABY5Ed-N8vOk4O2yDA _75BfARY4Ed-N8vOk4O2yDA _75BfABY4Ed-N8vOk4O2yDA"/>
+      <lifeline xmi:id="_y_8lgBY4Ed-N8vOk4O2yDA" name="P-net" coveredBy="_19y2sBY4Ed-N8vOk4O2yDA _4cCawBY4Ed-N8vOk4O2yDA _HBck8BY5Ed-N8vOk4O2yDA _K0yTsBY5Ed-N8vOk4O2yDA _OrGd8BY5Ed-N8vOk4O2yDA _ThpWIBY5Ed-N8vOk4O2yDA"/>
+      <lifeline xmi:id="_0Qau4BY4Ed-N8vOk4O2yDA" name="Database" coveredBy="_K1FOoBY5Ed-N8vOk4O2yDA _OqzjABY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_19pFsBY4Ed-N8vOk4O2yDA" name="Send1" covered="_toxsgBY4Ed-N8vOk4O2yDA" message="_1-1YgBY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_19y2sBY4Ed-N8vOk4O2yDA" name="Receive1" covered="_y_8lgBY4Ed-N8vOk4O2yDA" message="_1-1YgBY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4cCawBY4Ed-N8vOk4O2yDA" name="Send2" covered="_y_8lgBY4Ed-N8vOk4O2yDA" message="_4dYekBY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4cCawRY4Ed-N8vOk4O2yDA" name="Receive2" covered="_wuguYBY4Ed-N8vOk4O2yDA" message="_4dYekBY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_75BfABY4Ed-N8vOk4O2yDA" name="Send3" covered="_wuguYBY4Ed-N8vOk4O2yDA" event="_75UZ8BY4Ed-N8vOk4O2yDA" message="_76Xi0BY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_75BfARY4Ed-N8vOk4O2yDA" name="Receive3" covered="_wuguYBY4Ed-N8vOk4O2yDA" event="_75xF4BY4Ed-N8vOk4O2yDA" message="_76Xi0BY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-T2isBY4Ed-N8vOk4O2yDA" name="Send4" covered="_wuguYBY4Ed-N8vOk4O2yDA" message="_-VL_cBY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-T_soBY4Ed-N8vOk4O2yDA" name="Receive4" covered="_toxsgBY4Ed-N8vOk4O2yDA" message="_-VL_cBY4Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BvMoMBY5Ed-N8vOk4O2yDA" name="Send5" covered="_toxsgBY4Ed-N8vOk4O2yDA" message="_Bwr18BY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BvVyIBY5Ed-N8vOk4O2yDA" name="Receive5" covered="_wuguYBY4Ed-N8vOk4O2yDA" message="_Bwr18BY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HBTbABY5Ed-N8vOk4O2yDA" name="Send6" covered="_wuguYBY4Ed-N8vOk4O2yDA" message="_HCyowBY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HBck8BY5Ed-N8vOk4O2yDA" name="Receive6" covered="_y_8lgBY4Ed-N8vOk4O2yDA" message="_HCyowBY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_K0yTsBY5Ed-N8vOk4O2yDA" name="Send7" covered="_y_8lgBY4Ed-N8vOk4O2yDA" message="_K2kcYBY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_K1FOoBY5Ed-N8vOk4O2yDA" name="Receive7" covered="_0Qau4BY4Ed-N8vOk4O2yDA" message="_K2kcYBY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OqzjABY5Ed-N8vOk4O2yDA" name="Send8" covered="_0Qau4BY4Ed-N8vOk4O2yDA" message="_OschwBY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OrGd8BY5Ed-N8vOk4O2yDA" name="Receive8" covered="_y_8lgBY4Ed-N8vOk4O2yDA" message="_OschwBY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ThpWIBY5Ed-N8vOk4O2yDA" name="Send9" covered="_y_8lgBY4Ed-N8vOk4O2yDA" message="_Tjbe0BY5Ed-N8vOk4O2yDA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ThygEBY5Ed-N8vOk4O2yDA" name="Receive9" covered="_toxsgBY4Ed-N8vOk4O2yDA" message="_Tjbe0BY5Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_1-1YgBY4Ed-N8vOk4O2yDA" name="Accesso" messageSort="asynchCall" receiveEvent="_19y2sBY4Ed-N8vOk4O2yDA" sendEvent="_19pFsBY4Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_4dYekBY4Ed-N8vOk4O2yDA" name="Richiesta di riconoscimento dispositivo" messageSort="asynchCall" receiveEvent="_4cCawRY4Ed-N8vOk4O2yDA" sendEvent="_4cCawBY4Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_76Xi0BY4Ed-N8vOk4O2yDA" name="Message1" receiveEvent="_75BfARY4Ed-N8vOk4O2yDA" sendEvent="_75BfABY4Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_-VL_cBY4Ed-N8vOk4O2yDA" name="Interfacciamento con il dispositivo" receiveEvent="_-T_soBY4Ed-N8vOk4O2yDA" sendEvent="_-T2isBY4Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_Bwr18BY5Ed-N8vOk4O2yDA" name="Comunicazione dati" messageSort="reply" receiveEvent="_BvVyIBY5Ed-N8vOk4O2yDA" sendEvent="_BvMoMBY5Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_HCyowBY5Ed-N8vOk4O2yDA" name="Riconoscimento del dispositivo e della connessione" messageSort="asynchCall" receiveEvent="_HBck8BY5Ed-N8vOk4O2yDA" sendEvent="_HBTbABY5Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_K2kcYBY5Ed-N8vOk4O2yDA" name="Richiesta del caricamento della versione appropriata" messageSort="asynchCall" receiveEvent="_K1FOoBY5Ed-N8vOk4O2yDA" sendEvent="_K0yTsBY5Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_OschwBY5Ed-N8vOk4O2yDA" name="Rilascio della versione appropriata" messageSort="asynchCall" receiveEvent="_OrGd8BY5Ed-N8vOk4O2yDA" sendEvent="_OqzjABY5Ed-N8vOk4O2yDA"/>
+      <message xmi:id="_Tjbe0BY5Ed-N8vOk4O2yDA" name="Caricamento della versione appropriata" messageSort="asynchCall" receiveEvent="_ThygEBY5Ed-N8vOk4O2yDA" sendEvent="_ThpWIBY5Ed-N8vOk4O2yDA"/>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_75UZ8BY4Ed-N8vOk4O2yDA" name="SendEvt10"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_75xF4BY4Ed-N8vOk4O2yDA" name="RecvEvt10"/>
+  <profileApplication xmi:id="_-IETMhGHEd-HvP_Ox8Uswg">
+    <eAnnotations xmi:id="_-IETMxGHEd-HvP_Ox8Uswg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/schemas/Standard/1#/"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

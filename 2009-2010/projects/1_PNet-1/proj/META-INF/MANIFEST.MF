@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-Name: 0
+Bundle-SymbolicName: Pippo
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Require-Bundle: fr.obeo.acceleo.gen
+Bundle-ClassPath: lib/,
+ .
